@@ -10,13 +10,13 @@ const port=process.env.PORT || 5000;
 const host='0.0.0.0';
 
 
-/*mongoose.connect("mongodb+srv://sarthak_admin:if(pass==2)%23@cluster0.jh7pu.mongodb.net/myapp?retryWrites=true&w=majority", { useNewUrlParser: true,useCreateIndex:true,useUnifiedTopology:true});
+mongoose.connect("mongodb+srv://sarthak_admin:if(pass==2)%23@cluster0.jh7pu.mongodb.net/myapp?retryWrites=true&w=majority", { useNewUrlParser: true,useCreateIndex:true,useUnifiedTopology:true});
 
  conn = mongoose.connection;
  conn.once("open", ()=>{
     console.log("Successfully Connected to MongoDB");
 });
-*/
+
 
 
 const userRoute = require("./routes/user");
