@@ -5,7 +5,6 @@ const app=express();
 app.use(express.json());
 app.use(passport.initialize());
 
-const port=process.env.PORT || 5000;
 
 mongoose.connect("mongodb+srv://sarthak_admin:if(pass==2)%23@cluster0.jh7pu.mongodb.net/myapp?retryWrites=true&w=majority", { useNewUrlParser: true,useCreateIndex:true,useUnifiedTopology:true});
 
@@ -22,6 +21,6 @@ app.route("/").get((req,res)=> {
     res.json("Your API IS RUNNING UP!!");
 });
 
-app.listen(port,()=> {
-    console.log("Server running on port number : 5000" );
+app.listen(process.env.PORT || 5000,()=> {
+    console.log("Server running on port number : %d in %s mode", this.address().PORT ,app.settings.env);
 });
