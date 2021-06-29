@@ -2,7 +2,7 @@ const mongoose=require("mongoose");
 
 const PostSchem=mongoose.Schema;
 
-const NewPost=PostSchem(
+const NewPost=PostSchema(
     {
         title : {type : String, require : true},
 
