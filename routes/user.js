@@ -102,7 +102,7 @@ router.route("/login").post((req,res)=>{
             }
              if(result.password === req.body.password)
             {
-                const token =  jwt.sign({username : req.body.username}, process.env.config_key,{
+                const token =  jwt.sign({username : req.body.username}, configg.key,{
                     expiresIn : "24h"
                 });
                
