@@ -182,11 +182,11 @@ router.route("/verifyusername/:username").get((req, res) => {
             res.json({ Error: err });
         }
 
-        if (result != null) {
-            return res.status(200).json({ "Status": true });   // means a username already exists!!
+        if (result !== null) {
+            return res.json({ Status: true });   // means a username already exists!!
         }
         else {
-            return res.json({ "Status": false });              //means a username is available!!
+            return res.json({ Status: false });              //means a username is available!!
         }
     });
 });
